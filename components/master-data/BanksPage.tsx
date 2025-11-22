@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import type { Bank } from '../../types';
 import { IconPlusCircle, IconEdit, IconTrash } from '../Icons';
@@ -104,3 +105,7 @@ export const BanksPage: React.FC<BanksPageProps> = ({ banks, onSave, onDelete })
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={editingBank ? "ویرایش بانک" : "ایجاد بانک جدید"}>
                 <BankForm onSave={handleSave} onCancel={() => setIsModalOpen(false)} initialData={editingBank} />
+            </Modal>
+        </div>
+    );
+};
